@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>User page</title>
+</head>
+<body>
+  <h1>Edit: <%= name %> </h1>
+
+  <form class="" action="/user/edit" method="post">
+    <input type="hidden" name="name" id="name" placeholder="Name" value="<%= name %>" required><br>
+    <input type="text" name="age" id="age" placeholder="Age" value="<%= info.age %>" required><br>
+    <input type="text" name="occupation" id="occupation" placeholder="Occupation" value="<%= info.occupation %>" required><br>
+    <input type="text" name="hobby" id="hobby" placeholder="Hobby" value="<%= info.hobby %>" required><br>
+    <input type="submit" name="" value="Update">
+  </form>
+  <br>
+  <form class="" action="/user/delete" method="post">
+    <input type="hidden" name="name" id="name" value="<%= name %>">
+    <input type="submit" name="" value="Delete User" style="background:red;color:white">
+  </form>
+</body>
+</html>
